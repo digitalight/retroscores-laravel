@@ -54,7 +54,9 @@
 			</tbody>
 		</table>
 	</div>
-	
+	<div class="row justify-content-center py-2">
+	{{ $scores->links() }}
+</div>
 	
 </div>
 @endsection

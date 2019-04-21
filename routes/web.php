@@ -14,7 +14,7 @@
 Route::get('/', function () {
 	$systems = App\System::all();
 	$games = App\Game::all();
-	$scores = App\Score::with('game', 'user')->get();
+	$scores = App\Score::with('game', 'user')->orderby('updated_at', 'desc')->paginate(15);
     return view('welcome', compact('scores', 'systems', 'games'));
 });
 
