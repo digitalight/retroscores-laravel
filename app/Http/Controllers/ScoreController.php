@@ -56,7 +56,7 @@ class ScoreController extends Controller
             'game_id' => 'required',
             'score' => 'required',
             'user_id' => 'required',
-            'screenshot' => 'sometimes|image|max:880',
+            'screenshot' => 'sometimes|image|max:3000',
         ]);
 
         $score = Score::create($data);
@@ -114,7 +114,7 @@ class ScoreController extends Controller
             'game_id' => 'required',
             'score' => 'required',
             'user_id' => 'required',
-            'screenshot' => 'sometimes|image|max:880',
+            'screenshot' => 'sometimes|image|max:3000',
         ]);
 
         $score->update($data);
